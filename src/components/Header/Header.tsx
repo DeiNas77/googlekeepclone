@@ -48,7 +48,7 @@ function Header(): ReactElement | null {
           />
         </section>
       </nav>
-      <hr className=" text-[#e8eaed] font-light" />
+      <hr className=" text-[#9aa0a6] font-light" />
     </>
   );
 }

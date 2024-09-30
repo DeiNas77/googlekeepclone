@@ -9,12 +9,9 @@ function Home(): ReactElement | null {
       <Header />
       <section className="flex">
         <SideBar />
-      <div className="w-[100vw] flex justify-center">
-
-        <Notes />
-      </div>
-
-       
+        <div className="w-[100vw] flex justify-center bg-[#202124] ">
+          <Notes />
+        </div>
       </section>
     </>
   );
