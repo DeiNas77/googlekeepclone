@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import { TbSettings } from "react-icons/tb";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosSearch } from "react-icons/io";
 import { VscDebugRestart } from "react-icons/vsc";
 import { IoApps } from "react-icons/io5";
@@ -8,21 +7,14 @@ import { BsXLg } from "react-icons/bs";
 import { RxViewHorizontal } from "react-icons/rx";
 import logo from "../../assets/iconUser.png";
 
-function Header(): ReactElement | null {
+/* Components */
+import HamburgerMenu from "./HamburgerMenu";
+
+function Header({toggleMenu}): ReactElement | null {
   return (
     <>
       <nav className="bg-[#202124] p-[.6rem] flex justify-between items-center">
-        <section className="flex items-center gap-[.5rem] content-center relative left-5 ">
-          <GiHamburgerMenu className="text-[#e8eaed] text-[1.2rem] relative right-2 " />
-          <img
-            src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png"
-            alt=""
-            className="w-[2.5rem] relative left-1  bottom-[2.rem]"
-          />
-          <span className="font-sans text-[1.4rem] text-[#FFFFFFDE] font-normal ">
-            Keep
-          </span>
-        </section>
+        <HamburgerMenu toggleMenu={toggleMenu}/>
         <section className="">
           <form action="" className="flex bg-slate-700 rounded-md pl-7">
             <IoIosSearch className="text-[#e8eaed] text-[1.4rem] relative top-[.9rem] right-[.9rem]" />

@@ -4,13 +4,19 @@ import { FaRegBell } from "react-icons/fa";
 import { LuPencil } from "react-icons/lu";
 import { BiArchiveIn } from "react-icons/bi";
 import { ReactElement } from "react";
-type Props = {};
 
-export default function SideBar({}: Props):ReactElement | null {
+export default function SideBar({ sidebarActive }): ReactElement | null {
+
+  const sideDesactive =
+    "inline-flex flex-col h-[90vh] bg-[#202124] gap-[1.7rem] pr-[1.3rem] pl-5 w-[5.5vw] transition-all ease-in-out duration-500 ";
+  const sideActive =
+    "w-[25vw] rounded transition-all ease-in-out duration-500 inline-flex flex-col pr-[1.3rem] bg-[#202124] gap-[1.7rem] pr-[1.3rem] pl-5 h-[90vh]";
+
   return (
-    <section className="inline-flex flex-col h-[90vh] bg-[#202124] gap-[1.7rem] pr-[1.3rem] pl-5 w-[5.5vw]  hover:w-[25vw] hover:rounded hover:transition-all ease-in-out duration-1000">
-      <div className="pt-4">
+    <section className={sidebarActive ? sideActive : sideDesactive}>
+      <div className="pt-4 flex flex-row">
         <FaRegLightbulb className="text-[1.4rem] text-[#9aa0a6]" />
+        <span>Hola</span>
       </div>
       <div>
         <FaRegBell className="text-[1.4rem] text-[#9aa0a6]" />

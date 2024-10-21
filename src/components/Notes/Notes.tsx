@@ -1,9 +1,9 @@
 import { FaRegSquareCheck } from "react-icons/fa6";
 import { FaRegLightbulb } from "react-icons/fa";
 import { IoMdImage } from "react-icons/io";
-type Props = {};
 
-function Notes({}: Props) {
+
+function Notes() {
   return (
     <>
       <section className="">
